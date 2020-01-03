@@ -12,7 +12,7 @@ export const TextComponent = (props: TextComponentProps) => {
     let className = '';
     if (props.font) {
         if (props.font === "helvetica") {
-            className += 'helvetica-font '
+            className += 'helvetica-font'
         }
     }
 

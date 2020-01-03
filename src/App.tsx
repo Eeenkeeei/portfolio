@@ -1,6 +1,7 @@
 import {Switch, Route, NavLink, Redirect, BrowserRouter} from 'react-router-dom'
 import React, {useState} from 'react'
 import {Links} from "./Pages/PageList";
+import {TextComponent} from "./Components/Text";
 
 export const App = () => {
     const [openMenu, setOpenMenu] = useState(false);
@@ -33,7 +34,7 @@ export const App = () => {
                     </nav>
                 </header>
                 {/* ТЕЛО ВСЕЙ СТРАНИЦЫ */}
-                <main className="container">
+                <main>
                     <Switch>
                         {Links.map(link => {
                             return (
@@ -43,7 +44,25 @@ export const App = () => {
                         <Redirect to="/"/>
                     </Switch>
                 </main>
+                <footer>
+                    {Links.map(link => {
+                        return (
+                            <div key={link.path} className="footer-item">
+                                <NavLink  to={link.path}>
+                                    {link.label}
+                                </NavLink>
+                            </div>
+                        )
+                    })}
+                </footer>
+                <div className="footer-copyright">
+                    <div className="little-divider"/>
+                    <TextComponent className="footer-copyright-text">
+                        © Роман Ильичев, Казань, 2020
+                    </TextComponent>
+                </div>
             </BrowserRouter>
+
         </div>
     )
 };
