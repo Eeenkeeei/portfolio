@@ -33,7 +33,6 @@ export const App = () => {
                         </label>
                     </nav>
                 </header>
-                {/* ТЕЛО ВСЕЙ СТРАНИЦЫ */}
                 <main>
                     <Switch>
                         {Links.map(link => {
@@ -47,8 +46,8 @@ export const App = () => {
                 <footer>
                     {Links.map(link => {
                         return (
-                            <div key={link.path} className="footer-item">
-                                <NavLink  to={link.path}>
+                            <div key={link.path}>
+                                <NavLink to={link.path} className="footer-item">
                                     {link.label}
                                 </NavLink>
                             </div>

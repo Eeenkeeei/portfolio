@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
 
+:root {
+    --main-font-color: #666666;
+    --hover-color: #dbdbdb;
+    --background-color: #f8f8f8;
+    --secondary-font-color: #959595;
+    --lovely-grey: #e0e0e0;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -14,7 +22,7 @@ body, html {
     font-family: 'Source Sans Pro', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background: #f8f8f8;
+    background: var(--background-color);
 }
 
 nav {
@@ -31,7 +39,7 @@ nav {
 .header {
     margin-top: 6px;
     width: 100%;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid var(--lovely-grey);
     padding: 0 !important;
 }
 
@@ -48,30 +56,32 @@ nav {
 
 .menu li a {
     align-self: center;
-    color: #666666;
+    color: var(--main-font-color);
     font-size: 17px;
     padding: 10px 15px;
     transition: background .2s linear;
     letter-spacing: 1px;
+    font-weight: 300;
+
 }
 
 .menu li a.logo {
     font-size: 20px;
     margin-right: 240px;
     letter-spacing: 3px;
-    background: #f8f8f8;
+    background: var(--background-color);
 }
 
 .menu li a.logo:hover {
-    background: #f8f8f8;
+    background: var(--background-color);
 }
 
 .menu li a:hover {
-    background: #f0f0f0;
+    background: var(--hover-color);
     border-radius: 3px
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 976px) {
 
     .header {
         border-bottom: 0;
@@ -124,14 +134,14 @@ nav {
         text-align: center;
         align-self: center;
         align-content: center;
-        border-bottom: 1px solid #e0e0e0;
+        border-bottom: 1px solid var(--lovely-grey);
         letter-spacing: 2px;
     }
 
     .menu li a.logo {
         font-size: 20px;
         margin-right: 0;
-        background: #f8f8f8;
+        background: var(--background-color);
     }
 }
 
@@ -156,7 +166,7 @@ a {
 }
 
 .main-header-text {
-    color: #666666;
+    color: var(--main-font-color);
     font-family: 'Playfair Display', serif !important;
     font-weight: 300;
     letter-spacing: 2px;
@@ -168,40 +178,44 @@ a {
 
 .main-skills {
     margin-top: 20px !important;
+    width: 100%;
+    min-width: 180px;
 }
 
 .main-skills-icon-container {
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .main-skills-icon {
-    color: #666666;
+    color: var(--main-font-color);
     font-size: 30px !important;
     font-weight: bold;
     margin-right: 20px !important;
-    border: 2px solid #666666;
+    border: 2px solid var(--main-font-color);
     padding: 15px;
     border-radius: 50%;
 }
 
 .main-skills-text-container {
-    padding: 10px;
+    height: 100%;
     display: block;
 }
 
 .main-skills-text-header {
     font-size: 28px;
-    color: #666666;
+    color: var(--main-font-color);
+    transition: .5s ease-out;
 }
 
 .main-skills-text-body {
     font-size: 18px;
-    color: #959595;
+    color: var(--secondary-font-color);
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 976px) {
     .main-header-text {
         margin-top: 0 !important;
         font-size: 30px;
@@ -222,12 +236,12 @@ a {
 }
 
 .divider {
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid var(--lovely-grey);
     width: 100%
 }
 
 .main-portfolio-text {
-    color: #666666;
+    color: var(--main-font-color);
     font-family: 'Playfair Display', serif !important;
     font-weight: 300;
     letter-spacing: 2px;
@@ -239,7 +253,8 @@ a {
 }
 
 .main-portfolio-comment {
-    color: #666666;
+    color: var(--main-font-color);
+    font-family: 'Playfair Display', serif !important;
     font-weight: 300;
     letter-spacing: 2px;
     font-size: 18px;
@@ -251,9 +266,11 @@ a {
 }
 
 .main-projects-image {
-    height: 200px;
+    height: 300px;
     width: 95%;
-    border: 1px solid #e0e0e0;
+    max-width: 600px !important;
+    border: 1px solid var(--lovely-grey);
+    border-radius: 3px;
     margin-top: 15px !important;
 }
 
@@ -261,10 +278,14 @@ a {
     .main-projects-container {
         padding: 20px 20px 40px 20px
     }
+
+    .main-projects-image {
+        height: 200px;
+    }
 }
 
 footer {
-    color: #666666;
+    color: var(--main-font-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -272,9 +293,8 @@ footer {
 }
 
 .footer-item {
-    font-family: "Helvetica Neue", sans-serif !important;
     align-self: center;
-    color: #666666;
+    color: var(--main-font-color);
     font-size: 17px;
     font-weight: 300;
     padding: 10px 15px;
@@ -283,12 +303,12 @@ footer {
 }
 
 .footer-item:hover {
-    background: #f0f0f0;
+    background: var(--hover-color);
     border-radius: 3px
 }
 
 .little-divider {
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid var(--lovely-grey);
     margin-left: auto;
     margin-right: auto;
     width: 120px;
@@ -302,10 +322,24 @@ footer {
 .footer-copyright-text {
     padding-top: 20px;
     padding-bottom: 20px;
-    font-family: "Helvetica Neue", sans-serif !important;
-    color: #666666;
+    color: var(--main-font-color);
     font-size: 17px;
     font-weight: 300;
+}
+
+.github-href {
+    color: var(--main-font-color);
+    padding: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all .5s ease-out;
+}
+
+.github-href:hover {
+    background: var(--hover-color);
+    border-radius: 3px;
+    transition: all .5s ease-out;
 }
 
 @media screen and (max-width: 550px) {

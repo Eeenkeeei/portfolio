@@ -62,7 +62,7 @@ export const Main = () => {
                 </Grid>
             </Grid>
             <Divider/>
-            <Grid container className="container">
+            <Grid container>
                 <Grid item xs={12} style={{display: 'flex', alignItems: "center", justifyContent: "center"}}>
                     <TextComponent className="main-portfolio-text">
                         Портфолио
@@ -82,27 +82,31 @@ export const Main = () => {
                         Blesk-nails
                     </Grid>
                     <Grid item xs className="main-skills-text-body">
-                        Frontend: Typescript + ReactJS + Material-UI
+                        Frontend: Typescript + ReactJS + Material-UI <a className="github-href" href={"https://github.com/Eeenkeeei/blesk-nails"}>(GitHub)</a>
                     </Grid>
                     <Grid item xs className="main-skills-text-body">
-                        Backend: Node.js + Restify + MongoDB
+                        Backend: Node.js + Restify + MongoDB <a className="github-href" href={"https://github.com/Eeenkeeei/blesk-nails-backend"}>(GitHub)</a>
                     </Grid>
-                    <Grid item xs className="main-projects-image">
-                        image
+                    <Grid item xs>
+                        <img className="main-projects-image" src={require("../Images/blesk-nails-screen.png")}
+                             alt="Timetable for students"/>
+
                     </Grid>
                 </Grid>
                 <Grid item xs={12} sm={6}>
-                    <Grid item xs className="main-skills-text-header">
-                        Timetable for students
+                    <Grid item xs>
+                        <a className="main-skills-text-header" href={"https://eeenkeeei.github.io/timetable"}>Timetable
+                            for students</a>
                     </Grid>
                     <Grid item xs className="main-skills-text-body">
-                        Frontend: Typescript + ReactJS + Material-UI
+                        Frontend: Typescript + ReactJS + Material-UI <a className="github-href" href={"https://github.com/Eeenkeeei/timetable"}>(GitHub)</a>
                     </Grid>
                     <Grid item xs className="main-skills-text-body">
-                        Backend: Node.js + Restify + MongoDB + JWT Auth
+                        Backend: Node.js + Restify + MongoDB + JWT Auth <a className="github-href" href={"https://github.com/Eeenkeeei/timetable-server"}>(GitHub)</a>
                     </Grid>
-                    <Grid item xs className="main-projects-image">
-                        image
+                    <Grid item xs>
+                        <img className="main-projects-image" src={require("../Images/timetable-screen.png")}
+                             alt="Timetable for students"/>
                     </Grid>
                 </Grid>
             </Grid>
