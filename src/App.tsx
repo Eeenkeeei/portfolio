@@ -10,7 +10,7 @@ export const App = () => {
             <BrowserRouter>
                 <header className="header">
                     <nav>
-                        <input checked={openMenu} type="checkbox" id="checkbox-menu"/>
+                        <input onChange={()=>{}} checked={openMenu} type="checkbox" id="checkbox-menu"/>
                         <label>
                             <ul className="menu touch">
                                 <li>
@@ -20,8 +20,8 @@ export const App = () => {
                                 </li>
                                 {Links.map(link => {
                                     return (
-                                        <li>
-                                            <NavLink key={link.label} to={link.path}>
+                                        <li key={link.label}>
+                                            <NavLink  to={link.path}>
                                                 {link.label}
                                             </NavLink>
                                         </li>
