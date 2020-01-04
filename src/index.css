@@ -6,6 +6,7 @@
     --background-color: #f8f8f8;
     --secondary-font-color: #959595;
     --lovely-grey: #e0e0e0;
+    --blue-header-text: rgb(27, 99, 187)
 }
 
 * {
@@ -262,12 +263,13 @@ a {
 }
 
 .main-projects-container {
-    padding: 30px 100px 60px 100px;
+    /*padding: 30px 100px 60px 100px;*/
 }
 
 .main-projects-image {
-    height: 300px;
-    width: 95%;
+    max-height: 300px;
+    height: 100%;
+    width: 100%;
     max-width: 600px !important;
     border: 1px solid var(--lovely-grey);
     border-radius: 3px;
@@ -352,4 +354,64 @@ footer {
     }
 }
 
+.resume-container {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.resume-body-container {
+    margin-top: 16px;
+}
+
+.resume-header-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 16px !important;
+    /*border: 1px solid black;*/
+}
+
+.resume-header-text {
+    color: var(--main-font-color);
+    font-family: 'Playfair Display', serif !important;
+    font-weight: 300;
+    letter-spacing: 2px;
+    font-size: 26px;
+}
+
+.resume-contacts {
+    color: var(--main-font-color);
+    padding: 5px;
+    font-size: 20px;
+    font-family: "Helvetica Neue", sans-serif;
+    transition: all .5s ease-out;
+}
+
+.resume-header {
+    color: var(--blue-header-text);
+    font-size: 26px;
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 400;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.resume-body-text {
+    font-size: 26px;
+    font-family: 'Playfair Display', serif !important;
+    font-weight: 400;
+    color: var(--main-font-color);
+}
+
+.resume-body-comment {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: "Helvetica Neue", sans-serif;
+    color: var(--secondary-font-color);
+    font-size: 18px;
+}
 

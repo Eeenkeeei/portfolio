@@ -77,7 +77,7 @@ export const Main = () => {
                 </Grid>
             </Grid>
             <Grid container className="main-projects-container">
-                <Grid item xs={12} sm={6}>
+                <Grid item xs={12} sm={6} style={{display: "flex", justifyContent: "center", alignItems: "center", flexDirection: 'column'}}>
                     <Grid item xs className="main-skills-text-header">
                         Blesk-nails
                     </Grid>
@@ -90,10 +90,9 @@ export const Main = () => {
                     <Grid item xs>
                         <img className="main-projects-image" src={require("../Images/blesk-nails-screen.png")}
                              alt="Timetable for students"/>
-
                     </Grid>
                 </Grid>
-                <Grid item xs={12} sm={6}>
+                <Grid item xs={12} sm={6} style={{display: "flex", justifyContent: "center", alignItems: "center", flexDirection: 'column'}}>
                     <Grid item xs>
                         <a className="main-skills-text-header" href={"https://eeenkeeei.github.io/timetable"}>Timetable
                             for students</a>
@@ -110,7 +109,6 @@ export const Main = () => {
                     </Grid>
                 </Grid>
             </Grid>
-            <Divider/>
         </div>
     )
 };

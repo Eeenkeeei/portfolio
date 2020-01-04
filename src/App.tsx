@@ -2,6 +2,7 @@ import {Switch, Route, NavLink, Redirect, BrowserRouter} from 'react-router-dom'
 import React, {useState} from 'react'
 import {Links} from "./Pages/PageList";
 import {TextComponent} from "./Components/Text";
+import {Divider} from "./Components/Divider";
 
 export const App = () => {
     const [openMenu, setOpenMenu] = useState(false);
@@ -43,6 +44,7 @@ export const App = () => {
                         <Redirect to="/"/>
                     </Switch>
                 </main>
+                <Divider/>
                 <footer>
                     {Links.map(link => {
                         return (
