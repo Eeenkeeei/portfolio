@@ -1,7 +1,7 @@
 import {Main} from "./Main";
-import {Page1} from "./Page1";
-import {Page2} from "./Page2";
+import {Contacts} from "./Contacts";
 import {Resume} from "./Resume";
+import {About} from "./About";
 
 export interface Link {
     path: string
@@ -11,9 +11,9 @@ export interface Link {
 
 export const Links: Link[] = [
     {path: '/', label: 'Главная', component: Main},
+    {path: '/contacts', label: 'Контакты', component: Contacts},
     {path: '/resume', label: 'Резюме', component: Resume},
-    {path: '/about', label: 'О себе', component: Page2},
-    {path: '/contacts', label: 'Контакты', component: Page2},
-    {path: '/news', label: 'Что нового?', component: Page2}
+    {path: '/about', label: 'О себе', component: About},
+    // {path: '/news', label: 'Что нового?', component: Contacts}
 ];
 

@@ -4,7 +4,7 @@ import {TextComponent} from "../Components/Text";
 
 export const Resume = () => {
     return (
-        <div className="animated fadeIn resume-container">
+        <div className="animated fadeIn page-container">
             <Grid container>
                 <Grid item xs={12} sm={8} className="resume-header-container">
                     <TextComponent className="resume-header-text">

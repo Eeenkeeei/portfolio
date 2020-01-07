@@ -2,9 +2,12 @@ import React from 'react'
 import {TextComponent} from "../Components/Text";
 import {Grid, Icon} from "@material-ui/core";
 import {Divider} from "../Components/Divider";
+import moment from "moment";
+import 'moment/locale/ru';
 
 export const Main = () => {
-
+    moment.locale('ru')
+    const workDurationReact = moment(new Date("2019-05-01T00:00:00.000Z")).fromNow().split(' ');
     return (
         <div className="animated fadeIn">
             <Grid container className="container">
@@ -24,7 +27,7 @@ export const Main = () => {
                                     TypeScript
                                 </TextComponent>
                                 <TextComponent className="main-skills-text-body">
-                                    Опыт разработки - 8 месяцев
+                                    Опыт разработки - {workDurationReact[0]} {workDurationReact[1]}
                                 </TextComponent>
                             </Grid>
                         </Grid>
@@ -54,7 +57,7 @@ export const Main = () => {
                                     ReactJS
                                 </TextComponent>
                                 <TextComponent className="main-skills-text-body">
-                                    Опыт разработки - 8 месяцев
+                                    Опыт разработки - {workDurationReact[0]} {workDurationReact[1]}
                                 </TextComponent>
                             </Grid>
                         </Grid>

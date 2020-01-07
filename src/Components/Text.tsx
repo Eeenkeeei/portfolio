@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface TextComponentProps {
-    children: string
+    children: any
     style?: React.CSSProperties
     font?: "helvetica"
     className?: string
