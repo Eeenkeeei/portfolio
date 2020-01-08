@@ -6,7 +6,7 @@ import moment from "moment";
 import 'moment/locale/ru';
 
 export const Main = () => {
-    moment.locale('ru')
+    moment.locale('ru');
     const workDurationReact = moment(new Date("2019-05-01T00:00:00.000Z")).fromNow().split(' ');
     return (
         <div className="animated fadeIn">

@@ -1,8 +1,26 @@
 import {Switch, Route, NavLink, Redirect, BrowserRouter} from 'react-router-dom'
-import React, {useState} from 'react'
-import {Links} from "./Pages/PageList";
+import React, {Suspense, lazy, useState} from 'react'
 import {TextComponent} from "./Components/Text";
 import {Divider} from "./Components/Divider";
+import {LoadingComponent} from "./Pages/About";
+export interface Link {
+    path: string
+    label: string
+    component: any
+}
+
+const Main = lazy(() => import("./Pages/ComponentExports/MainExport"));
+const Contacts = lazy(() => import("./Pages/ComponentExports/ContactsExport"));
+const Resume = lazy(() => import("./Pages/ComponentExports/ResumeExport"));
+const About = lazy(() => import("./Pages/ComponentExports/AboutExport"));
+
+export const Links: Link[] = [
+    {path: '/', label: 'Главная', component: Main},
+    {path: '/contacts', label: 'Контакты', component: Contacts},
+    {path: '/resume', label: 'Резюме', component: Resume},
+    {path: '/about', label: 'О себе', component: About},
+];
+
 
 export const App = () => {
     const [openMenu, setOpenMenu] = useState(false);
@@ -35,14 +53,16 @@ export const App = () => {
                     </nav>
                 </header>
                 <main>
-                    <Switch>
-                        {Links.map(link => {
-                            return (
-                                <Route key={link.path} exact path={link.path} component={link.component}/>
-                            )
-                        })}
-                        <Redirect to="/"/>
-                    </Switch>
+                    <Suspense fallback={<LoadingComponent/>}>
+                        <Switch>
+                            {Links.map(link => {
+                                return (
+                                    <Route key={link.path} exact path={link.path} component={link.component}/>
+                                )
+                            })}
+                            <Redirect to="/"/>
+                        </Switch>
+                    </Suspense>
                 </main>
                 <Divider/>
                 <footer>

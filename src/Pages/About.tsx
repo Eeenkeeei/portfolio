@@ -62,7 +62,7 @@ export const About = () => {
     )
 };
 
-const LoadingComponent = () => (
+export const LoadingComponent = () => (
     <TextComponent style={{marginTop: '1rem', marginBottom: '1rem'}}>
         Загрузкаааааааа................
     </TextComponent>
