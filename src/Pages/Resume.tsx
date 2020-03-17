@@ -55,6 +55,9 @@ export const Resume = () => {
                             — Опыт коммерческой Frontend разработки на TypeScript + React + GraphQL
                         </TextComponent>
                         <TextComponent className="resume-body-comment">
+                            — Адаптивная верстка (Material-UI, Bootstrap 4)
+                        </TextComponent>
+                        <TextComponent className="resume-body-comment">
                             — Опыт Backend разработки на NodeJS + MongoDB для Pet-проектов
                         </TextComponent>
                         <TextComponent className="resume-body-comment">
@@ -96,6 +99,9 @@ export const Resume = () => {
                         </TextComponent>
                         <TextComponent className="resume-body-comment">
                             — Material-UI
+                        </TextComponent>
+                        <TextComponent className="resume-body-comment">
+                            — Bootstrap 4
                         </TextComponent>
                         <TextComponent className="resume-body-comment">
                             — Git
